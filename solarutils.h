@@ -1,6 +1,9 @@
 #ifndef SOLAR_UTILS_H
 #define SOLAR_UTILS_H
 
+#include <stdint.h>
+
+
 //! An edition of Sine that uses degrees.
 /*!
   \param deg The value in degrees on which to apply the function.
@@ -63,7 +66,7 @@ float within(float x, float period);
   \param is_sunrise 1 indicates to calculate sunrise, 0 indicates to calculate sunset
   \return the approximated sunrise or sunset in hours
 */
-float calculate(int year, int month, int day, float lat, float lng, float utc_offset, int is_sunrise);
+float calculate(int32_t year, int32_t month, int32_t day, float lat, float lng, float utc_offset, int32_t is_sunrise);
 
 //! Calculates the time of sunrise.
 /*!
@@ -75,7 +78,7 @@ float calculate(int year, int month, int day, float lat, float lng, float utc_of
   \param utc_offset the UTC timezone offset to uses
   \return the approximated sunrise in hours
 */
-float calculate_sunrise(int year, int month, int day, float lat, float lng, int utc_offset);
+float calculate_sunrise(int32_t year, int32_t month, int32_t day, float lat, float lng, int32_t utc_offset);
 
 //! Calculates the time of sunset.
 /*!
@@ -87,6 +90,6 @@ float calculate_sunrise(int year, int month, int day, float lat, float lng, int 
   \param utc_offset the UTC timezone offset to uses
   \return the approximated sunset in hours
 */
-float calculate_sunset(int year, int month, int day, float lat, float lng, int utc_offset);
+float calculate_sunset(int32_t year, int32_t month, int32_t day, float lat, float lng, int32_t utc_offset);
 
 #endif /* SOLAR_UTILS_H */

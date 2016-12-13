@@ -48,7 +48,7 @@ float within(float x, float period)
     return x;
 }
 
-float calculate(int year, int month, int day, float lat, float lng, float utc_offset, int is_sunrise)
+float calculate(int32_t year, int32_t month, int32_t day, float lat, float lng, float utc_offset, int32_t is_sunrise)
 {
     // generate day of the year
     float n1 = floor(275 * month / 9);
@@ -111,13 +111,13 @@ float calculate(int year, int month, int day, float lat, float lng, float utc_of
 }
 
 // utc_offset is per quarter hour
-float calculate_sunrise(int year, int month, int day, float lat, float lng, int utc_offset)
+float calculate_sunrise(int32_t year, int32_t month, int32_t day, float lat, float lng, int32_t utc_offset)
 {
     return calculate(year, month, day, lat, lng, utc_offset / 4.0, 1);
 }
 
 // utc_offset is per quarter hour
-float calculate_sunset(int year, int month, int day, float lat, float lng, int utc_offset)
+float calculate_sunset(int32_t year, int32_t month, int32_t day, float lat, float lng, int32_t utc_offset)
 {
     return calculate(year, month, day, lat, lng, utc_offset / 4.0, 0);
 }

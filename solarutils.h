@@ -61,7 +61,7 @@ float within(float x, float period);
   \param lng the float longitude
   \param utc_offset the UTC timezone offset to uses
   \param is_sunrise 1 indicates to calculate sunrise, 0 indicates to calculate sunset
-  \return the approximated sunrise or sunset in minutes
+  \return the approximated sunrise or sunset in hours
 */
 float calculate(int year, int month, int day, float lat, float lng, float utc_offset, int is_sunrise);
 
@@ -73,7 +73,7 @@ float calculate(int year, int month, int day, float lat, float lng, float utc_of
   \param lat the float latitude
   \param lng the float longitude
   \param utc_offset the UTC timezone offset to uses
-  \return the approximated sunrise in minutes
+  \return the approximated sunrise in hours
 */
 float calculate_sunrise(int year, int month, int day, float lat, float lng, int utc_offset);
 
@@ -85,7 +85,7 @@ float calculate_sunrise(int year, int month, int day, float lat, float lng, int 
   \param lat the float latitude
   \param lng the float longitude
   \param utc_offset the UTC timezone offset to uses
-  \return the approximated sunset in minutes
+  \return the approximated sunset in hours
 */
 float calculate_sunset(int year, int month, int day, float lat, float lng, int utc_offset);
 
